@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YouTube</title>
-            <link rel="icon" href="youtube.png" type="image/x-icon">
+    <link rel="icon" href="youtube.png" type="image/x-icon" />
     <link rel="stylesheet" href="website.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -28,22 +28,35 @@
         <input type="text" placeholder="Tìm kiếm" class="search" />
         <button type="submit" class="btn-search">
           <i class="fa-solid fa-magnifying-glass"></i>
+          <div class="tooltips">Search</div>
         </button>
-        <button class="voice"><i class="fa-solid fa-microphone"></i></button>
+        <button class="voice">
+          <i class="fa-solid fa-microphone"></i>
+          <div class="tooltips">Search with your voice</div>
+        </button>
       </div>
       <div class="right-section">
-        <img src="add-video-icon.png" alt="create video" class="add-video" />
-        <img
-          src="https://supersimple.dev/exercise/youtube/icons/youtube-apps.svg"
-          alt=""
-          class="youtube-app"
-        />
-        <img
-          src="https://supersimple.dev/exercise/youtube/icons/notifications.svg"
-          alt=""
-          class="notifications"
-        />
+        <div class="create-video-btn">
+          <img src="add-video-icon.png" alt="create video" class="add-video" />
+          <div class="tooltips">Create</div>
+        </div>
+        <div class="youtube-app-btn">
+          <img
+            src="https://supersimple.dev/exercise/youtube/icons/youtube-apps.svg"
+            alt=""
+            class="youtube-app"
+          />
+          <div class="tooltips">YouTube apps</div>
+        </div>
+        <div class="notifications-btn">
+          <img
+            src="https://supersimple.dev/exercise/youtube/icons/notifications.svg"
+            alt=""
+            class="notifications"
+          />
+          <div class="tooltips">Notifications</div>
         <button class="number">3</button>
+        </div>
         <img src="avt.jpg" alt="" class="avatar" />
       </div>
     </header>
@@ -215,9 +228,7 @@
             <div class="video-info">
               <p class="video-title">
                 <a href="https://www.youtube.com/watch?v=094y1Z2wpJg"></a>
-                  The Simplest Math Problem No One Can Solve - Collatz
-                  Conjecture</a
-                >
+                The Simplest Math Problem No One Can Solve - Collatz Conjecture
               </p>
               <a
                 href="https://www.youtube.com/c/veritasium"

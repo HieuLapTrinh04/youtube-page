@@ -1,295 +1,3 @@
-/* body {
-  box-sizing: border-box;
-  font-family: Roboto, Arial, sans-serif;
-}
-.header {
-  display: flex;
-  height: 57px;
-  border-bottom: 1px solid rgb(222, 222, 222);
-  margin-bottom: 20px;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: white;
-  z-index: 100;
-}
-
-.left-section {
-  display: flex;
-  align-items: center;
-}
-.fa-bars {
-  height: 24px;
-  width: 24px;
-  margin-left: 24px;
-  margin-right: 24px;
-  cursor: pointer;
-  font-size: 25px;
-  cursor: pointer;
-}
-.logo-ytb {
-  width: 90px;
-  height: 20px;
-  cursor: pointer;
-}
-.middle-section {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  max-width: 470px;
-  margin-left: 60px;
-}
-.search {
-  font-family: Roboto, Arial, sans-serif;
-  height: 40px;
-  flex: 1;
-  padding-left: 12px;
-  font-size: 16px;
-  border: 1px solid rgb(204, 204, 204);
-  border-radius: 2px;
-  box-shadow: inset 0px 1px 2px rgb(238, 238, 238);
-}
-.fa-magnifying-glass {
-  font-size: 17px;
-  color: rgb(81, 80, 80);
-  cursor: pointer;
-}
-.btn-search {
-  border: 1px solid rgb(204, 204, 204);
-  height: 40px;
-  width: 70px;
-  padding-right: 6px;
-  padding-bottom: 1px;
-  border-radius: 2px;
-  background-color: #f7f7f7;
-  cursor: pointer;
-}
-.fa-microphone {
-  font-size: 18px;
-  cursor: pointer;
-}
-.voice {
-  background-color: #f7f7f7;
-  height: 42px;
-  width: 42px;
-  border: none;
-  border-radius: 20px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-.right-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 182px;
-  margin-right: 24px;
-  margin-left: 29px;
-  flex-shrink: 0;
-}
-.add-video {
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-}
-.youtube-app {
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-}
-.notifications {
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-}
-.number {
-  width: 13px;
-  height: 15px;
-  background-color: rgb(206, 17, 17);
-  color: white;
-  border: none;
-  font-weight: bold;
-  font-size: 10px;
-  border-radius: 10px;
-  position: absolute;
-  top: 18px;
-  right: 78px;
-  padding-right: 11px;
-  cursor: pointer;
-}
-.avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 16px;
-  cursor: pointer;
-}
-.sidebar {
-  position: fixed;
-  width: 72px;
-  top: 56px;
-  left: 0;
-  bottom: 0;
-  padding-top: 4px;
-  background-color: white;
-  z-index: 200;
-}
-.sidebar-link {
-  font-size: 10px;
-  height: 74px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-.sidebar-link img {
-  height: 24px;
-  margin-bottom: 6.5px;
-}
-
-main {
-  position: absolute;
-  top: 40px;
-  left: 50px;
-  padding: 20px 0px 10px 15px;
-}
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 10px;
-  row-gap: 22px;
-  padding: 12px;
-}
-.video-card {
-  padding: 4px;
-  vertical-align: top;
-}
-.thumbnail-container {
-  position: relative;
-}
-.thumbnail {
-  width: 100%;
-  height: auto;
-}
-.video-time {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.9);
-    font-size: 12px;
-    padding: 4px;
-    border-radius: 2px;
-    font-weight: 500;
-}
-.video-info-grid {
-  display: grid;
-  grid-template-columns: 48px 1fr;
-}
-.channel-profile a img {
-  width: 36px;
-  border-radius: 36px;
-  margin-top: 10px;
-}
-.video-title {
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 10px;
-}
-.video-title a {
-  text-decoration: none;
-  color: black;
-}
-.channel-name {
-  text-decoration: none;
-  font-size: 12px;
-  margin-top: 10px;
-  color: #606060;
-}
-.video-stats {
-  font-size: 12px;
-  margin-top: 4px;
-  margin-bottom: 12px;
-  color: #606060;
-}
-
-
-@media (max-width: 768px) {
-  .header {
-    height: 50px;
-  }
-  .left-section {
-    margin-left: -20px;
-  }
-  .fa-bars {
-    margin-left: 40px;
-    margin-right: 15px;
-  }
-  .logo-ytb {
-    width: 80px;
-  }
-  .middle-section {
-    display: none;
-  }
-  .right-section {
-    width: auto;
-    margin-left: 0;
-    margin-right: 12px;
-    justify-content: flex-end;
-  }
-  .add-video,
-  .youtube-app,
-  .notifications,
-  .number {
-    display: none;
-  }
-
-  .right-section::before {
-    content: "\f002";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    font-size: 20px;
-    color: rgb(81, 80, 80);
-    margin-right: 20px;
-    cursor: pointer;
-  }
-
-  .sidebar {
-    display: none;
-
-  }
-
-  main {
-    position: relative;
-    top: 50px;
-    left: 0;
-    padding: 10px;
-    min-width: initial;
-  }
-
-  .video-grid {
-    grid-template-columns: 1fr;
-    column-gap: 0;
-    row-gap: 15px;
-    padding: 0;
-  }
-  .video-card {
-    padding: 0;
-    max-width: 100%;
-  }
-  .thumbnail {
-    width: 100%;
-  }
-}
-
-@media (min-width: 769px) {
-    main {
-        left: 72px; 
-        padding: 20px 24px 10px 24px;
-    }
-} */
  body {
   box-sizing: border-box;
   font-family: Roboto, Arial, sans-serif;
@@ -339,12 +47,57 @@ main {
 .search {
   font-family: Roboto, Arial, sans-serif;
   height: 40px;
+  width: 0;
   flex: 1;
   padding-left: 12px;
   font-size: 16px;
   border: 1px solid rgb(204, 204, 204);
   border-radius: 2px;
   box-shadow: inset 0px 1px 2px rgb(238, 238, 238);
+}
+.btn-search,
+.voice,
+.create-video-btn,
+.youtube-app-btn,
+.notifications-btn {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+.btn-search .tooltips,
+.voice .tooltips, 
+.create-video-btn .tooltips, 
+.youtube-app-btn .tooltips,
+.notifications-btn .tooltips {
+  position: absolute;
+  bottom: -40px ;
+  right: 5px;
+  background-color: rgb(171, 171, 171);
+  padding: 5px 10px;
+  border-radius: 2px;
+  color: white;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.voice .tooltips {
+  right: -50px;
+}
+.youtube-app-btn .tooltips,.notifications-btn .tooltips {
+  right: -40px;
+}
+.create-video-btn .tooltips {
+  right: -15px;
+}
+
+.btn-search:hover .tooltips,
+.voice:hover .tooltips,
+.create-video-btn:hover .tooltips,
+.youtube-app-btn:hover .tooltips,
+.notifications-btn:hover .tooltips {
+  opacity: 1;
 }
 .fa-magnifying-glass {
   font-size: 17px;
@@ -361,6 +114,9 @@ main {
   background-color: #f7f7f7;
   cursor: pointer;
 }
+.btn-search:hover {
+  background-color: #edecec;
+}
 .fa-microphone {
   font-size: 18px;
   cursor: pointer;
@@ -374,6 +130,7 @@ main {
   margin-left: 10px;
   cursor: pointer;
 }
+
 .right-section {
   display: flex;
   align-items: center;
@@ -408,8 +165,8 @@ main {
   font-size: 10px;
   border-radius: 10px;
   position: absolute;
-  top: 18px;
-  right: 78px;
+  top: 0px;
+  right: -3px;
   padding-right: 11px;
   cursor: pointer;
 }
@@ -419,7 +176,6 @@ main {
   border-radius: 16px;
   cursor: pointer;
 }
-/* SIDEBAR (Desktop View) */
 .sidebar {
   position: fixed;
   width: 72px;
@@ -439,17 +195,19 @@ main {
   align-items: center;
   cursor: pointer;
 }
+.sidebar-link:hover {
+  background-color: #e9e6e6;
+}
 .sidebar-link img {
   height: 24px;
   margin-bottom: 6.5px;
 }
 
-/* MAIN (Desktop View) */
 main {
-  /* Loại bỏ min-width: 140vh; và điều chỉnh lại vị trí */
   position: relative; 
-  margin-left: 72px; /* Dịch chuyển nội dung chính để chừa chỗ cho sidebar */
+  margin: -10px -8.3px -10px 64px ;
   padding: 20px 24px 10px 24px;
+  background-color: rgb(247, 247, 247);
 }
 .video-grid {
   display: grid;
@@ -457,6 +215,16 @@ main {
   column-gap: 10px;
   row-gap: 22px;
   padding: 12px;
+}
+@media (max-width: 1100px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width:800px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 .video-card {
   padding: 4px;
@@ -466,9 +234,9 @@ main {
   position: relative;
 }
 .thumbnail {
-  /* Đặt lại width: 100% để thumbnail tự co giãn */
   width: 100%; 
   height: auto;
+  border-radius: 5px;
 }
 .video-time {
     position: absolute;
@@ -484,7 +252,6 @@ main {
 .video-info-grid {
   display: grid;
   grid-template-columns: 48px 1fr;
-
 }
 .channel-profile a img {
   width: 36px;
@@ -492,7 +259,6 @@ main {
   margin-top: 10px;
 }
 .video-title {
-  /* Bỏ max-width để tiêu đề sử dụng hết không gian */
   font-size: 14px;
   font-weight: bold;
   margin-top: 10px;
@@ -514,37 +280,29 @@ main {
   color: #606060;
 }
 
-/* --- RESPONSIVENESS (Mobile/Small Screen) --- */
 
-@media (max-width: 768px) {
-  /* Header adjustments for small screens */
+@media (max-width: 600px) {
   .header {
     height: 50px;
-    /* Dịch chuyển notification number */
     right: 0;
   }
   body {
     padding-top: 50px;
-    /* Bỏ padding-bottom để tránh xung đột với sidebar cố định ở dưới */
     padding-bottom: 0; 
   }
 
   .fa-bars {
-    /* Ẩn menu icon trên mobile */
     display: none;
   }
   .left-section {
-    /* Đặt logo vào giữa left-section */
     margin-left: 10px;
     flex: 1;
     justify-content: flex-start;
   }
   .middle-section {
-    /* Ẩn thanh tìm kiếm trên mobile */
     display: none;
   }
   .right-section {
-    /* Điều chỉnh right section để chỉ hiển thị search và avatar */
     width: auto;
     margin-left: 0;
     margin-right: 10px;
@@ -554,16 +312,13 @@ main {
   .youtube-app,
   .notifications,
   .number {
-    /* Ẩn các icon không cần thiết trên mobile */
     display: none;
   }
   .right-section .avatar {
-    /* Giữ avatar ở cuối */
     margin-left: 15px;
   }
-  /* Thêm icon tìm kiếm vào right-section */
   .right-section::before {
-    content: "\f002"; /* Font Awesome magnifying glass icon code */
+    content: "\f002"; 
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     font-size: 20px;
@@ -571,19 +326,16 @@ main {
     cursor: pointer;
   }
   
-  /* Main content adjustment for full width */
   main {
-    position: relative; /* Đặt lại thành relative để nó nằm trong luồng tài liệu */
+    position: relative;
     margin-left: 0;
     padding: 10px 0;
     min-width: initial;
-    /* Thêm padding-bottom để chừa chỗ cho fixed sidebar ở dưới */
     padding-bottom: 56px; 
   }
 
-  /* Video grid adjustment for single column */
   .video-grid {
-    grid-template-columns: 1fr; /* Bố cục 1 cột */
+    grid-template-columns: 1fr; 
     column-gap: 0;
     row-gap: 15px;
     padding: 0 10px;
@@ -592,45 +344,40 @@ main {
     padding: 0;
   }
 
-  /* SIDEBAR (Mobile Bottom Bar) */
   .sidebar {
-    /* Chuyển sidebar xuống cuối màn hình */
     position: fixed;
     bottom: 0;
-    top: auto; /* Bỏ top: 56px; */
+    top: auto; 
     left: 0;
     right: 0;
-    width: 100%; /* Chiếm toàn bộ chiều rộng */
-    height: 56px; /* Chiều cao cố định cho thanh menu dưới */
+    width: 100%; 
+    height: 56px; 
     padding-top: 0;
     border-top: 1px solid rgb(222, 222, 222);
-    /* Bố cục flex để sắp xếp các link theo chiều ngang */
     display: flex; 
     justify-content: space-around; 
     align-items: center;
     z-index: 200;
   }
   .sidebar-link {
-    /* Điều chỉnh link cho thanh dưới */
     height: 100%;
-    flex: 1; /* Chia đều không gian */
+    flex: 1; 
     margin: 0;
     padding: 0;
   }
 }
 
-/* Đảm bảo thumbnail lấy hết chiều rộng của card trên mobile */
 @media (max-width: 768px) {
   .thumbnail-container {
-    padding: 0 10px; /* Thêm padding cho thumbnail để nó không chạm cạnh màn hình */
+    padding: 0 10px;
   }
   .thumbnail {
     width: 100%;
   }
   .video-info-grid {
-    padding: 0 10px; /* Thêm padding cho info */
+    padding: 0 10px;
   }
   .video-time {
-    right: 20px; /* Cân chỉnh lại vị trí time */
+    right: 20px;
   }
 }
